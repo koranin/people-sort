@@ -20,36 +20,4 @@ public class PeopleSortUtil {
     personIterable.forEach(personList::add);
     return personList;
   }
-
-  private static Boolean isAscending(final String ascending) {
-    return Boolean.parseBoolean(ascending);
-  }
-
-  private static Comparator<String> getStringComparator(final Boolean isAscending) {
-    return (a, b) -> isAscending ? compareString(a, b) : compareString(b, a);
-  }
-
-  private static int compareString(final String a, final String b) {
-    // TODO: implement here
-    return 0;
-  }
- 
-  public static Comparator<Date> getDateComparator(final Boolean isAscending) {
-    return (a, b) -> isAscending ? compareDate(a, b) : compareDate(b, a);
-  }
-  
-  private static int compareDate(final Date a, final Date b) {
-    // TODO: implement here
-    return 0;
-  }
- 
-  private static Comparator<Double> getDoubleComparator(final Boolean isAscending) {
-    return (a, b) -> isAscending ? compareDouble(a, b) : compareDouble(b, a);
-  }
-
-  private static int compareDouble(final Double a, final Double b) {
-    // TODO: implement here
-    return 0;
-  }
 }
-
