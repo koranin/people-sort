@@ -1,8 +1,15 @@
+import java.util.ArrayList;
 import java.util.List;
 
-class PeopleSortUtil {
-  static List<Person> sort(Iterable<Person> people, String sortField, String ascending) {
-    // TODO: implement sort
-    return null;
+public class PeopleSortUtil {
+  public static List<Person> sort(final Iterable<Person> people, final String sortField,
+      final String ascending) {
+    return buildPersonList(people);
+  }
+
+  private static List<Person> buildPersonList(final Iterable<Person> personIterable) {
+    final List<Person> personList = new ArrayList<>();
+    personIterable.forEach(personList::add);
+    return personList;
   }
 }
