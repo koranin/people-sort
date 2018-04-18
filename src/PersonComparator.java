@@ -11,17 +11,17 @@ import java.lang.Double;
 import java.time.LocalDate;
 
 public class PersonComparator implements Comparator<Person> {
-  private final String compareField;
+  private final String sortField;
   private final Boolean ascending;
   
-  public PersonComparator(final String compareField, final Boolean ascending) {
-    this.compareField = compareField;
+  public PersonComparator(final String sortField, final Boolean ascending) {
+    this.sortField = sortField;
     this.ascending = ascending;
   }
   
   @Override
   public int compare(final Person firstPerson, final Person secondPerson) {
-    switch (compareField) {
+    switch (sortField) {
       case "ssn": 
         return compare(firstPerson.ssn, secondPerson.ssn);
       case "dateOfBirth":
