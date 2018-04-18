@@ -17,4 +17,17 @@ class Person{
 }
 ```
 
+## Build
+
+```
+javac -d out src/*.java
+```
+
+## Run Tests
+
+```
+java -ea -cp ./out Main
+```
+
+
 ## Trade-offs
