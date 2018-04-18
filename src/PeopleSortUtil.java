@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,7 +10,11 @@ public class PeopleSortUtil {
    */
   public static List<Person> sort(final Iterable<Person> people, final String sortField,
       final String ascending) {
-    return buildPersonList(people);
+    final List<Person> personList = buildPersonList(people);
+    final PersonComparator personComparator =
+      new PersonComparator(sortField, Boolean.parseBoolean(ascending));
+    Collections.sort(personList, personComparator);
+    return personList;
   }
 
   /**
